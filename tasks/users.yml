@@ -1,0 +1,12 @@
+- name: create ansnode user
+  user: 
+    name: ansnode
+    system: yes
+
+- name: copy sudoers_ansible
+    copy:
+      src: files/sudoers_ansnode
+      dest: /etc/sudoers.d/ansnode
+      owner: root
+      group: root
+      mode: 0440
